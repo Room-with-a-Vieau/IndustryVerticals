@@ -1,36 +1,196 @@
-a[target='_blank']:after {
-  content: '\1F5D7'
+/* MEMIC Brand Colors and Typography */
+:root {
+  --memic-blue: #003da5;
+  --memic-dark-blue: #002866;
+  --memic-light-blue: #0055cc;
+  --memic-orange: #ff6900;
+  --memic-gray: #666666;
+  --memic-light-gray: #f5f5f5;
+  --memic-white: #ffffff;
 }
 
-/*
-  Hides Sitecore editor markup,
-  if you run the app in connected mode while the Sitecore cookies
-  are set to edit mode.
-*/
-.scChromeData, .scpm { display: none !important; }
+/* Base Typography */
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #ffffff;
+}
 
-/*
-  Styles for default JSS error components
-*/
+/* External link indicator */
+a[target='_blank']:after {
+  content: '\1F5D7';
+  margin-left: 4px;
+}
+
+/* Sitecore editor markup - hides in connected mode */
+.scChromeData, .scpm { 
+  display: none !important; 
+}
+
+/* JSS error components */
 .sc-jss-editing-error,
 .sc-jss-placeholder-error {
   padding: 1em;
   background-color: lightyellow;
+  border: 1px solid #f0ad4e;
+  border-radius: 4px;
 }
 
-/* 
-  Style for default content block
-*/
+/* Headings - MEMIC style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: var(--memic-dark-blue);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Content Title */
 .contentTitle {
-    font-size: 3.5rem;
-    font-weight: 300;
-    line-height: 1.2;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--memic-dark-blue);
+  margin-bottom: 1.5rem;
 }
 
+/* Links - MEMIC style */
 a {
+  color: var(--memic-blue);
   text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {
+  color: var(--memic-light-blue);
   text-decoration: underline;
 }
+
+a:focus {
+  outline: 2px solid var(--memic-orange);
+  outline-offset: 2px;
+}
+
+/* Buttons - MEMIC style */
+.btn, button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--memic-orange);
+  color: var(--memic-white);
+}
+
+.btn-primary:hover {
+  background-color: #e55f00;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: var(--memic-blue);
+  color: var(--memic-white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--memic-dark-blue);
+  text-decoration: none;
+}
+
+/* Navigation elements */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Cards and content blocks */
+.card {
+  background-color: var(--memic-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Forms */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--memic-blue);
+  box-shadow: 0 0 0 3px rgba(0, 61, 165, 0.1);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
