@@ -21,7 +21,6 @@ body {
 /* External link indicator */
 a[target='_blank']:after {
   content: '\1F5D7';
-  margin-left: 4px;
 }
 
 /* Sitecore editor markup - hides in connected mode */
@@ -34,8 +33,7 @@ a[target='_blank']:after {
 .sc-jss-placeholder-error {
   padding: 1em;
   background-color: lightyellow;
-  border: 1px solid #f0ad4e;
-  border-radius: 4px;
+
 }
 
 /* Headings - MEMIC style */
@@ -68,14 +66,12 @@ h3 {
   font-weight: 300;
   line-height: 1.2;
   color: var(--memic-dark-blue);
-  margin-bottom: 1.5rem;
 }
 
 /* Links - MEMIC style */
 a {
   color: var(--memic-blue);
   text-decoration: none;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 a:hover {
@@ -88,7 +84,7 @@ a:focus {
   outline-offset: 2px;
 }
 
-/* Buttons - MEMIC style */
+/* Buttons - MEMIC style 
 .btn, button {
   display: inline-block;
   padding: 12px 24px;
@@ -101,7 +97,7 @@ a:focus {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-}
+} */
 
 .btn-primary {
   background-color: var(--memic-orange);
